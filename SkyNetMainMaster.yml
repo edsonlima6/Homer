@@ -12,10 +12,14 @@ pool:
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
-  buildConfiguration: 'Debug'
 
 stages:
   - stage: BuildInDebugMode
+  
+    variables:
+    - name: buildConfiguration
+      value: 'Debug'
+
     jobs:
     - job: buildAndTest
       timeoutInMinutes: 150
@@ -25,20 +29,3 @@ stages:
       
       - template: /.pipelineTemplates/BuildAndTest.yml
     
-  - stage: BuildWithoutTemplate
-    jobs:
-      - job: BuildWithoutTemplate
-        steps:
-
-        - task: DotNetCoreCLI@2
-          displayName: Restore Projects
-          inputs:
-            command: 'restore'
-            projects: '**/*.csproj'
-            feedsToUse: 'select'
-
-        - task: DotNetCoreCLI@2
-          displayName: Build Projects
-          inputs:
-            command: 'build'
-            projects: '**/*.csproj'

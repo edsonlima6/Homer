@@ -2,12 +2,14 @@ steps:
 
   - task: DotNetCoreCLI@2
     displayName: Restore Projects
+    configuration: '$(buildConfiguration)'
     inputs:
         command: 'restore'
         projects: '**/*.csproj'
         feedsToUse: 'select'
 
   - task: DotNetCoreCLI@2
+    configuration: '$(buildConfiguration)'
     displayName: Build Projects
     inputs:
         command: 'build'
@@ -15,6 +17,7 @@ steps:
 
   - task: DotNetCoreCLI@2
     displayName: Run Unit & Integration tests
+    configuration: '$(buildConfiguration)'
     inputs:
         command: 'test'
         projects: '**\Tests\**\*.csproj'
