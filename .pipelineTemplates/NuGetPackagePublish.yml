@@ -1,0 +1,30 @@
+  steps:  
+    - powershell: |
+        $nugetVersion = "$(Build.BuildNumber)-$(buildConfiguration)"
+        $branchName = "$(Build.SourceBranchName)" -replace "_", "-"
+        echo $nugetVersion
+        echo "##vso[task.setvariable variable=nugetVersion]$nugetVersion"
+        echo "##vso[task.setvariable variable=branchName]$branchName"
+      displayName: 'Getting Session Manager current version'
+      
+    - task: NuGetCommand@2
+      displayName: 'Create Domain NuGet package'
+      env:
+        NUGET_PACKAGE_VERSION: $(nugetVersion)
+      inputs:
+        command: 'pack'
+        packagesToPack: 'SkyNetRisenDomain.nuspec'
+        packDestination: '$(Build.ArtifactStagingDirectory)\packages'
+        versioningScheme: 'byEnvVar'
+        versionEnvVar: NUGET_PACKAGE_VERSION
+        configuration: '$(buildConfiguration)'
+        buildProperties: 'nowarn=NU5100'
+        arguments: '-version $(nugetVersion)'
+        includeSymbols: true
+    
+    - task: NuGetCommand@2
+      displayName: NuGet push
+      inputs:
+        command: 'push'
+        nuGetFeedType: 'external'
+        publishFeedCredentials: SkyNetRisenNuget

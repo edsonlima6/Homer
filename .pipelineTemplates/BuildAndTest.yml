@@ -1,0 +1,14 @@
+steps:
+
+  - task: DotNetCoreCLI@2
+    displayName: Restore Projects
+    inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+        feedsToUse: 'select'
+
+  - task: DotNetCoreCLI@2
+    displayName: Build Projects
+    inputs:
+        command: 'build'
+        projects: '**/*.csproj'

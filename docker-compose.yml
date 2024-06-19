@@ -1,0 +1,22 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  skynetapicore:
+    image: skynetapicore
+    build:
+      context: .
+      dockerfile: SkyNetApiCore/Dockerfile
+    ports:
+      - "5000:80"
+    depends_on: 
+      - db
+
+  db:
+      image: "mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04"
+      ports:
+        - 1433:1433
+      environment:
+        SA_PASSWORD: "I10easttoLA"
+        ACCEPT_EULA: "Y"

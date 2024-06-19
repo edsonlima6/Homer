@@ -1,0 +1,16 @@
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>SkyNetRisen.Domain</id>
+		<version>1.0.0</version>
+		<authors>SkyNetRisen.Domain</authors>
+		<description>Domain layer to use in different projects/solutions.</description>
+		<releaseNotes>Release notes are available on project page.</releaseNotes>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<copyright>Copyright © Sky Net</copyright>
+		<repository type="git" url="https://www.nuget.org/profiles/SkyNetRisen"/>
+		<compaany>SkyNet</compaany>
+	</metadata>
+	<files>
+		<file src="Domain\bin\Debug\net6.0\Domain.*" target="net6.0" />
+	</files>
+</package>
