@@ -10,6 +10,6 @@
 		<repository type="git" url="https://www.nuget.org/profiles/Homer"/>
 	</metadata>
 	<files>
-		<file src="Homer.Domain\bin\Debug\net8.0\Domain.*" target="net8.0" />
+		<file src="Homer.Domain\bin\Debug\net8.0\*" target="net8.0" />
 	</files>
 </package>
