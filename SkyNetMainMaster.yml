@@ -20,7 +20,7 @@ stages:
     - name: buildConfiguration
       value: 'Debug'
     - name: Major
-      value: $(Date:yyyyMMdd\THHmm\Z)
+      value: $(Build.BuildNumber)
 
     jobs:
     - job: buildAndTest
