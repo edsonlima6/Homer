@@ -20,7 +20,7 @@ stages:
     - name: buildConfiguration
       value: 'Debug'
     - name: Major
-      value: $(Build.BuildNumber)
+      value: $(major).$(minor).$(patch)$(Build.BuildNumber)
 
     jobs:
     - job: buildAndTest
