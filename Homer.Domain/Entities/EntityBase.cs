@@ -1,4 +1,6 @@
-﻿namespace Homer.Domain.Entities
+﻿using System;
+
+namespace Homer.Domain.Entities
 {
     /// <summary>
     /// Entity class object <see cref="Object"/>
