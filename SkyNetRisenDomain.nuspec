@@ -8,7 +8,6 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<copyright>Copyright © Sky Net</copyright>
 		<repository type="git" url="https://www.nuget.org/profiles/Homer"/>
-		<company>SkyNet</company>
 	</metadata>
 	<files>
 		<file src="Homer.Domain\bin\Debug\net8.0\Domain.*" target="net8.0" />
