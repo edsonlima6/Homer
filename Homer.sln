@@ -27,6 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homer.Domain.UnitTest", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homer.Skynet.Api.User", "Homer.Skynet.Api.User\Homer.Skynet.Api.User.csproj", "{6A432D13-4C93-4CF7-9B36-653422C43BCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDAD4680-B344-4AE0-B048-980396D7E49A}"
+	ProjectSection(SolutionItems) = preProject
+		ImportantCommands.txt = ImportantCommands.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
