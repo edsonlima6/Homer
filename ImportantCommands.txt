@@ -1,0 +1,4 @@
+/* Install nuget.exe
+   Then runs the command 
+   nuget.exe pack C:\Development\EventLog.nuspec -NonInteractive -OutputDirectory C:\Development\LocalPkgs -Properties Configuration=Debug;nowarn=NU5100 -Symbols -version 101.0.0.0901-Debug -Verbosity Detailed
+*/
