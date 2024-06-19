@@ -19,9 +19,6 @@ stages:
     variables:
     - name: buildConfiguration
       value: 'Debug'
-      Major: '1'
-      Minor: '0'
-      Patch: '0'
 
     jobs:
     - job: buildAndTest
