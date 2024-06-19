@@ -1,13 +1,8 @@
-  steps:  
-    - powershell: |
-        $nugetVersion = 1.0.0
-        echo $nugetVersion
-      displayName: 'Getting current version'
-      
+  steps:        
     - task: NuGetCommand@2
       displayName: 'Create Domain NuGet package'
       env:
-        NUGET_PACKAGE_VERSION: $(nugetVersion)
+        NUGET_PACKAGE_VERSION: $(Major)
       inputs:
         command: 'pack'
         packagesToPack: 'SkyNetRisenDomain.nuspec'
@@ -16,6 +11,6 @@
         versionEnvVar: NUGET_PACKAGE_VERSION
         configuration: '$(buildConfiguration)'
         buildProperties: 'nowarn=NU5100'
-        arguments: '-version $(nugetVersion)'
+        arguments: '-version $(Major)'
         includeSymbols: true
     
