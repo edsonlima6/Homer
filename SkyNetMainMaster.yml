@@ -29,6 +29,8 @@ stages:
       
       - template: /.pipelineTemplates/BuildAndTest.yml
   
+      - template: /.pipelineTemplates/NuGetPackagePublish.yml
+  
   - stage: BuildInReleaseMode
   
     variables:

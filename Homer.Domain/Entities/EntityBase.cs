@@ -5,6 +5,8 @@
     /// </summary>
     public class EntityBase
     {
+        private string _name = string.Empty;
+
         /// <summary>
         /// The entity's number identification.
         /// </summary>
@@ -13,7 +15,7 @@
         /// <summary>
         /// Entity name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get => _name; set => _name = value; }
 
         /// <summary>
         /// Guid to save dinamicly.
