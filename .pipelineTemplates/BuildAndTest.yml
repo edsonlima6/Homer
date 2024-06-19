@@ -12,3 +12,10 @@ steps:
     inputs:
         command: 'build'
         projects: '**/*.csproj'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+    command: 'test'
+    projects: '**\Tests\**\*.csproj'
+    publishTestResults: false
+    testRunTitle: 'Run Unit & Integration tests'
