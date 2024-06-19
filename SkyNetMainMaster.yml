@@ -19,8 +19,6 @@ stages:
     variables:
     - name: buildConfiguration
       value: 'Debug'
-    - name: Major
-      value: 1.0.$(Rev:.rrrr)
 
     jobs:
     - job: buildAndTest

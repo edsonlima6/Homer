@@ -7,11 +7,14 @@
         command: 'pack'
         packagesToPack: 'SkyNetRisenDomain.nuspec'
         packDestination: '$(Build.ArtifactStagingDirectory)\packages'
-        versioningScheme: 'byEnvVar'
+        versioningScheme: byPrereleaseNumber
+        majorVersion: '$(Major)'
+        minorVersion: '$(Minor)'
+        patchVersion: '$(Patch)'
         versionEnvVar: NUGET_PACKAGE_VERSION
         configuration: '$(buildConfiguration)'
         buildProperties: 'nowarn=NU5100'
-        arguments: '-version $(Major)'
+
         includeSymbols: true
     
     - task: NuGetCommand@2
