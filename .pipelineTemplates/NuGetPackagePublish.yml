@@ -1,11 +1,8 @@
   steps:  
     - powershell: |
-        $nugetVersion = "$(Build.BuildNumber)-$(buildConfiguration)"
-        $branchName = "$(Build.SourceBranchName)" -replace "_", "-"
+        $nugetVersion = 1.0.0
         echo $nugetVersion
-        echo "##vso[task.setvariable variable=nugetVersion]$nugetVersion"
-        echo "##vso[task.setvariable variable=branchName]$branchName"
-      displayName: 'Getting Session Manager current version'
+      displayName: 'Getting current version'
       
     - task: NuGetCommand@2
       displayName: 'Create Domain NuGet package'
