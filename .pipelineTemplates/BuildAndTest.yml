@@ -2,24 +2,23 @@ steps:
 
   - task: DotNetCoreCLI@2
     displayName: Restore Projects
-    configuration: '$(buildConfiguration)'
     inputs:
         command: 'restore'
         projects: '**/*.csproj'
         feedsToUse: 'select'
 
   - task: DotNetCoreCLI@2
-    configuration: '$(buildConfiguration)'
     displayName: Build Projects
     inputs:
         command: 'build'
         projects: '**/*.csproj'
+        arguments: '--configuration $(BuildConfiguration) --no-restore'
 
   - task: DotNetCoreCLI@2
     displayName: Run Unit & Integration tests
-    configuration: '$(buildConfiguration)'
     inputs:
         command: 'test'
         projects: '**\Tests\**\*.csproj'
+        arguments: '--configuration $(BuildConfiguration) --no-restore'
         publishTestResults: false
         testRunTitle: 'Run Unit & Integration tests'

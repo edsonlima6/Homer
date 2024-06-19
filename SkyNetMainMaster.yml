@@ -28,4 +28,19 @@ stages:
         clean: true
       
       - template: /.pipelineTemplates/BuildAndTest.yml
+  
+  - stage: BuildInReleaseMode
+  
+    variables:
+    - name: buildConfiguration
+      value: 'Release'
+
+    jobs:
+    - job: buildAndTest
+      timeoutInMinutes: 150
+      steps:
+      - checkout: self
+        clean: true
+      
+      - template: /.pipelineTemplates/BuildAndTest.yml
     
