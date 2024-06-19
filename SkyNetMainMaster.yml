@@ -19,6 +19,8 @@ stages:
     variables:
     - name: buildConfiguration
       value: 'Debug'
+    - name: Major
+      value: $(major)
 
     jobs:
     - job: buildAndTest

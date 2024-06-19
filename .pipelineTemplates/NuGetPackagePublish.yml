@@ -1,8 +1,3 @@
-  variables:
-    Major: '1'
-    Minor: '0'
-    Patch: '0'
-
   steps:        
     - task: NuGetCommand@2
       displayName: 'Create Domain NuGet package'
@@ -14,8 +9,6 @@
         packDestination: '$(Build.ArtifactStagingDirectory)\packages'
         versioningScheme: byEnvVar
         majorVersion: '$(Major)'
-        minorVersion: '$(Minor)'
-        patchVersion: '$(Patch)'
         versionEnvVar: NUGET_PACKAGE_VERSION
         configuration: '$(buildConfiguration)'
         buildProperties: 'nowarn=NU5100'
