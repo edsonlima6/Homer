@@ -7,7 +7,7 @@
         command: 'pack'
         packagesToPack: 'SkyNetRisenDomain.nuspec'
         packDestination: '$(Build.ArtifactStagingDirectory)\packages'
-        versioningScheme: byPrereleaseNumber
+        versioningScheme: byEnvVar
         majorVersion: '$(Major)'
         minorVersion: '$(Minor)'
         patchVersion: '$(Patch)'
