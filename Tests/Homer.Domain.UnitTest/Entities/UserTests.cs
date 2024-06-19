@@ -24,5 +24,15 @@ namespace Homer.Domain.UnitTest.Entities
 
             Assert.True(User.Id > 1);
         }
+
+        [Fact]
+        public void UserTestName()
+        {
+            User.Name = "Edson";
+
+            User.Name += " - Lima";
+
+            Assert.NotEmpty(User.Name);
+        }
     }
 }
