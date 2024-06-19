@@ -24,8 +24,6 @@ stages:
         clean: true
       
       - template: /.pipelineTemplates/BuildAndTest.yml
-      
-      - template: /.pipelineTemplates/NuGetPackagePublish.yml
     
   - stage: BuildWithoutTemplate
     jobs:
