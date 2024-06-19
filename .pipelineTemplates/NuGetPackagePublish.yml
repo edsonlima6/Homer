@@ -19,4 +19,4 @@
       inputs:
         command: push
         nuGetFeedType: external
-        publishFeedCredentials: nuget.org
+        publishFeedCredentials: SkyNetRisen
