@@ -9,6 +9,8 @@ trigger:
 pool:
   name: MP.Windows
 
+name: 0.$(minor).$(patch)$(Rev:r)
+
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
