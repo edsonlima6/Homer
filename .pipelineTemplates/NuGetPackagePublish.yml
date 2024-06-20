@@ -1,8 +1,10 @@
-  variables:
+
+
+  steps:     
+    variables:
     - name: nuget_package_version
       value: $(Major).$(Minor).$(Path)
 
-  steps:        
     - task: NuGetCommand@2
       displayName: 'Create Domain NuGet package'
       env:
