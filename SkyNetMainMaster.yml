@@ -9,14 +9,12 @@ trigger:
 pool:
   name: MP.Windows
 
-name: 0.$(minor).$(patch)$(Rev:r)
-
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   Major: '1'
   Minor: '0'
-  Patch: $(Rev:r)
+  Patch: $(Build.BuildId)
 
 stages:
   - stage: BuildInDebugMode
