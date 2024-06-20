@@ -12,15 +12,14 @@ pool:
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
-
+  Major: '1.$(Build.BuildNumber)'
+  
 stages:
   - stage: BuildInDebugMode
   
     variables:
     - name: buildConfiguration
       value: 'Debug'
-    - name: Major
-      value: $(Build.BuildNumber)
 
     jobs:
     - job: buildAndTest
