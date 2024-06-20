@@ -23,7 +23,7 @@ stages:
     - name: buildConfiguration
       value: 'Debug'    
     - name: nuget_package_version
-      value: $(Major).$(Minor).$(Patch)
+      value: $(Major).$(Minor).$(Patch)-$(buildConfiguration)
 
     jobs:
     - job: buildAndTest
@@ -41,7 +41,9 @@ stages:
     variables:
     - name: buildConfiguration
       value: 'Release'
-
+    - name: nuget_package_version
+      value: $(Major).$(Minor).$(Patch)-$(buildConfiguration)
+      
     jobs:
     - job: buildAndTest
       timeoutInMinutes: 150
