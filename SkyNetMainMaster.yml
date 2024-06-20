@@ -43,7 +43,7 @@ stages:
       value: 'Release'
     - name: nuget_package_version
       value: $(Major).$(Minor).$(Patch)-$(buildConfiguration)
-      
+
     jobs:
     - job: buildAndTest
       timeoutInMinutes: 150
@@ -53,3 +53,4 @@ stages:
       
       - template: /.pipelineTemplates/BuildAndTest.yml
     
+      - template: /.pipelineTemplates/NuGetPackagePublish.yml
