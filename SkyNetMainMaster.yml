@@ -15,14 +15,16 @@ variables:
   Major: '1'
   Minor: '0'
   Path: $(Build.BuildNumber)
-  
+
 stages:
   - stage: BuildInDebugMode
   
     variables:
     - name: buildConfiguration
-      value: 'Debug'
-
+      value: 'Debug'    
+    - name: nuget_package_version
+      value: $(Major).$(Minor).$(Path)
+      
     jobs:
     - job: buildAndTest
       timeoutInMinutes: 150
