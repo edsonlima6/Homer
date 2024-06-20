@@ -12,7 +12,9 @@ pool:
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
-  Major: '1.$(Build.BuildNumber)'
+  Major: '1'
+  Minor: '0'
+  Path: $(Build.BuildNumber)
   
 stages:
   - stage: BuildInDebugMode
