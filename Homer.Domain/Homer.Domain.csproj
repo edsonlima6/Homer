@@ -5,6 +5,7 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<IsPackable>true</IsPackable>
+		<OutputPath>..\Bin\Homer.Domain\</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
