@@ -1,6 +1,5 @@
+steps:     
 
-
-  steps:     
     - task: NuGetCommand@2
       displayName: 'Create Domain NuGet package'
       env:

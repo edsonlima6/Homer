@@ -14,7 +14,7 @@ variables:
   buildPlatform: 'Any CPU'
   Major: '1'
   Minor: '0'
-  Path: $(Build.BuildNumber)
+  Patch: $(Build.BuildNumber)
 
 stages:
   - stage: BuildInDebugMode
@@ -23,8 +23,8 @@ stages:
     - name: buildConfiguration
       value: 'Debug'    
     - name: nuget_package_version
-      value: $(Major).$(Minor).$(Path)
-      
+      value: $(Major).$(Minor).$(Patch)
+
     jobs:
     - job: buildAndTest
       timeoutInMinutes: 150
