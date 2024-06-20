@@ -14,7 +14,7 @@ variables:
   buildPlatform: 'Any CPU'
   Major: '1'
   Minor: '0'
-  Patch: $(Rev:.rrrr)
+  Patch: $(Rev:r)
 
 stages:
   - stage: BuildInDebugMode
