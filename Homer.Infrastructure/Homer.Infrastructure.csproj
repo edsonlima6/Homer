@@ -16,4 +16,8 @@
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Homer.Domain\Homer.Domain.csproj" />
+	</ItemGroup>
+
 </Project>
