@@ -5,9 +5,12 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup Label="Homer Debug" Condition="'$(Configuration)'=='Debug'">
-    <PackageVersion Include="Homer.Domain" Version="20240619.21.0" />
+    <PackageVersion Include="FluentAssertions" Version="6.12.0" />
+    <PackageVersion Include="Homer.Domain" Version="1.0.199-Debug" />
+    <PackageVersion Include="NSubstitute" Version="5.1.0" />
   </ItemGroup>
   <ItemGroup Label="Homer Release" Condition="'$(Configuration)'=='Release'">
+    <PackageVersion Include="Homer.Domain" Version="1.0.199-Release" />
   </ItemGroup>
   <ItemGroup Label="Homer 3rd party packages">
   </ItemGroup>
