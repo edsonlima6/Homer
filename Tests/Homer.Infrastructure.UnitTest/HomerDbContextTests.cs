@@ -2,6 +2,7 @@
 using Homer.Domain.Common;
 using Homer.Domain.Entities;
 using Homer.Infrastructure.Context;
+using Homer.Infrastructure.UnitTest.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using NSubstitute;
@@ -47,10 +48,10 @@ namespace Homer.Infrastructure.UnitTest
             // Arrange
             var mockContext = Substitute.For<HomerDbContext>();
             var userList = new List<User>();
-            SetMockContext(mockContext);
+            HomerDbFixture.SetMockContext(mockContext);
             mockContext.When(c => c.SaveChanges()).Do((s) => {
                 userList.Add(new User());
-                SetMockContext(mockContext, userList);
+                HomerDbFixture.SetMockContext(mockContext, userList);
             });
 
             // Act
@@ -60,28 +61,6 @@ namespace Homer.Infrastructure.UnitTest
             // Assert
             mockContext.Users.Count().Should().BeGreaterThan(0);
             mockContext.Users.Should().HaveCount(1);
-        }
-
-        private static void SetMockContext(HomerDbContext mockContext, List<User>? systemEventLogEntries = null)
-        {
-            var data = new List<User>
-              {
-                new(),
-              }.AsQueryable();
-
-            if (systemEventLogEntries != null)
-            {
-                data = systemEventLogEntries.AsQueryable();
-            }
-
-            var mockSet = Substitute.For<DbSet<User>, IQueryable<User>>();
-
-            ((IQueryable<User>)mockSet).Provider.Returns(data.Provider);
-            ((IQueryable<User>)mockSet).Expression.Returns(data.Expression);
-            ((IQueryable<User>)mockSet).ElementType.Returns(data.ElementType);
-            ((IQueryable<User>)mockSet).GetEnumerator().Returns(data.GetEnumerator());
-
-            mockContext.Users.Returns(mockSet);
         }
     }
 }
