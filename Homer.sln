@@ -23,16 +23,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homer.Infrastructure", "Hom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homer.Application", "Homer.Application\Homer.Application\Homer.Application.csproj", "{9F48C63F-6718-4D97-AD52-64FB446544D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homer.Domain.UnitTest", "Tests\Homer.Domain.UnitTest\Homer.Domain.UnitTest.csproj", "{773FD358-D24A-47DE-9480-5B70BA432E3B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homer.Skynet.Api.User", "Homer.Skynet.Api.User\Homer.Skynet.Api.User.csproj", "{6A432D13-4C93-4CF7-9B36-653422C43BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homer.Domain.UnitTest", "Tests\Homer.Domain.UnitTest\Homer.Domain.UnitTest.csproj", "{773FD358-D24A-47DE-9480-5B70BA432E3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDAD4680-B344-4AE0-B048-980396D7E49A}"
 	ProjectSection(SolutionItems) = preProject
 		ImportantCommands.txt = ImportantCommands.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homer.Infrastructure.UnitTest", "Tests\Homer.Infrastructure.UnitTest\Homer.Infrastructure.UnitTest.csproj", "{F30F0B6D-C1AC-49A2-AA10-D64465B83364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homer.Infrastructure.UnitTest", "Tests\Homer.Infrastructure.UnitTest\Homer.Infrastructure.UnitTest.csproj", "{F30F0B6D-C1AC-49A2-AA10-D64465B83364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,10 +54,6 @@ Global
 		{773FD358-D24A-47DE-9480-5B70BA432E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{773FD358-D24A-47DE-9480-5B70BA432E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{773FD358-D24A-47DE-9480-5B70BA432E3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A432D13-4C93-4CF7-9B36-653422C43BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A432D13-4C93-4CF7-9B36-653422C43BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A432D13-4C93-4CF7-9B36-653422C43BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A432D13-4C93-4CF7-9B36-653422C43BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F30F0B6D-C1AC-49A2-AA10-D64465B83364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F30F0B6D-C1AC-49A2-AA10-D64465B83364}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F30F0B6D-C1AC-49A2-AA10-D64465B83364}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -76,7 +70,6 @@ Global
 		{98A2727D-EDCA-4452-AE03-8236A9E5C876} = {9AE99F8E-17A6-4EC7-98C5-00CE0F62D283}
 		{9F48C63F-6718-4D97-AD52-64FB446544D7} = {BA6A9FB1-53C2-4043-A19E-A6EBF02E676F}
 		{773FD358-D24A-47DE-9480-5B70BA432E3B} = {CD143724-8BE3-406E-B667-6DE4186A08B2}
-		{6A432D13-4C93-4CF7-9B36-653422C43BCD} = {62106431-052E-4D46-A07E-A7FC0A4B8411}
 		{F30F0B6D-C1AC-49A2-AA10-D64465B83364} = {CD143724-8BE3-406E-B667-6DE4186A08B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
