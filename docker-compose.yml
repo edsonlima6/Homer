@@ -3,15 +3,14 @@
 version: '3.4'
 
 services:
-  skynetapicore:
-    image: skynetapicore
+  homerloginapi:
+    image: homerloginapi
+    user: root
     build:
       context: .
-      dockerfile: SkyNetApiCore/Dockerfile
+      dockerfile: Homer.Apresentation/Host/Homer.LoginApi/Dockerfile
     ports:
-      - "5000:80"
-    depends_on: 
-      - db
+      - "80:8080"
 
   db:
       image: "mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04"
